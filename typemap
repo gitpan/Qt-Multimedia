@@ -1,0 +1,198 @@
+# this typemap is only used by xsubpp
+# to marshal THIS in xs code
+QAudioFormat *                          		T_PTROBJ_0000
+QSysInfo *                              		T_PTROBJ_0001
+QAudioDeviceInfo *                      		T_PTROBJ_0002
+QAudioOutput *                          		T_PTROBJ_0003
+QFlag *                                 		T_PTROBJ_0004
+QAbstractVideoBuffer *                  		T_PTROBJ_0005
+Qt *                                    		T_PTROBJ_0006
+QAudioInput *                           		T_PTROBJ_0007
+QIncompatibleFlag *                     		T_PTROBJ_0008
+QInternal *                             		T_PTROBJ_0009
+QAbstractAudioInput *                   		T_PTROBJ_0010
+QVideoFrame *                           		T_PTROBJ_0011
+QVideoSurfaceFormat *                   		T_PTROBJ_0012
+QAudioEnginePlugin *                    		T_PTROBJ_0013
+QAbstractVideoSurface *                 		T_PTROBJ_0014
+QAbstractAudioDeviceInfo *              		T_PTROBJ_0015
+QAbstractAudioOutput *                  		T_PTROBJ_0016
+QAudioEngineFactoryInterface *          		T_PTROBJ_0017
+QBool *                                 		T_PTROBJ_0018
+
+################################################################
+INPUT
+T_PTROBJ_0000
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAudioFormat\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAudioFormat\");
+
+T_PTROBJ_0001
+    if (sv_derived_from($arg, \"Qt::Core::QSysInfo\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QSysInfo\");
+
+T_PTROBJ_0002
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAudioDeviceInfo\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAudioDeviceInfo\");
+
+T_PTROBJ_0003
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAudioOutput\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAudioOutput\");
+
+T_PTROBJ_0004
+    if (sv_derived_from($arg, \"Qt::Core::QFlag\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QFlag\");
+
+T_PTROBJ_0005
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAbstractVideoBuffer\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAbstractVideoBuffer\");
+
+T_PTROBJ_0006
+    if (sv_derived_from($arg, \"Qt\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt\");
+
+T_PTROBJ_0007
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAudioInput\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAudioInput\");
+
+T_PTROBJ_0008
+    if (sv_derived_from($arg, \"Qt::Core::QIncompatibleFlag\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QIncompatibleFlag\");
+
+T_PTROBJ_0009
+    if (sv_derived_from($arg, \"Qt::Core::QInternal\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QInternal\");
+
+T_PTROBJ_0010
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAbstractAudioInput\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAbstractAudioInput\");
+
+T_PTROBJ_0011
+    if (sv_derived_from($arg, \"Qt::Multimedia::QVideoFrame\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QVideoFrame\");
+
+T_PTROBJ_0012
+    if (sv_derived_from($arg, \"Qt::Multimedia::QVideoSurfaceFormat\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QVideoSurfaceFormat\");
+
+T_PTROBJ_0013
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAudioEnginePlugin\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAudioEnginePlugin\");
+
+T_PTROBJ_0014
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAbstractVideoSurface\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAbstractVideoSurface\");
+
+T_PTROBJ_0015
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAbstractAudioDeviceInfo\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAbstractAudioDeviceInfo\");
+
+T_PTROBJ_0016
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAbstractAudioOutput\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAbstractAudioOutput\");
+
+T_PTROBJ_0017
+    if (sv_derived_from($arg, \"Qt::Multimedia::QAudioEngineFactoryInterface\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::QAudioEngineFactoryInterface\");
+
+T_PTROBJ_0018
+    if (sv_derived_from($arg, \"Qt::Core::QBool\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QBool\");
+
+
+################################################################
+OUTPUT
+T_PTROBJ_0000
+    sv_setref_pv($arg, \"Qt::Multimedia::QAudioFormat\", (void *)$var);
+
+T_PTROBJ_0001
+    sv_setref_pv($arg, \"Qt::Core::QSysInfo\", (void *)$var);
+
+T_PTROBJ_0002
+    sv_setref_pv($arg, \"Qt::Multimedia::QAudioDeviceInfo\", (void *)$var);
+
+T_PTROBJ_0003
+    sv_setref_pv($arg, \"Qt::Multimedia::QAudioOutput\", (void *)$var);
+
+T_PTROBJ_0004
+    sv_setref_pv($arg, \"Qt::Core::QFlag\", (void *)$var);
+
+T_PTROBJ_0005
+    sv_setref_pv($arg, \"Qt::Multimedia::QAbstractVideoBuffer\", (void *)$var);
+
+T_PTROBJ_0006
+    sv_setref_pv($arg, \"Qt\", (void *)$var);
+
+T_PTROBJ_0007
+    sv_setref_pv($arg, \"Qt::Multimedia::QAudioInput\", (void *)$var);
+
+T_PTROBJ_0008
+    sv_setref_pv($arg, \"Qt::Core::QIncompatibleFlag\", (void *)$var);
+
+T_PTROBJ_0009
+    sv_setref_pv($arg, \"Qt::Core::QInternal\", (void *)$var);
+
+T_PTROBJ_0010
+    sv_setref_pv($arg, \"Qt::Multimedia::QAbstractAudioInput\", (void *)$var);
+
+T_PTROBJ_0011
+    sv_setref_pv($arg, \"Qt::Multimedia::QVideoFrame\", (void *)$var);
+
+T_PTROBJ_0012
+    sv_setref_pv($arg, \"Qt::Multimedia::QVideoSurfaceFormat\", (void *)$var);
+
+T_PTROBJ_0013
+    sv_setref_pv($arg, \"Qt::Multimedia::QAudioEnginePlugin\", (void *)$var);
+
+T_PTROBJ_0014
+    sv_setref_pv($arg, \"Qt::Multimedia::QAbstractVideoSurface\", (void *)$var);
+
+T_PTROBJ_0015
+    sv_setref_pv($arg, \"Qt::Multimedia::QAbstractAudioDeviceInfo\", (void *)$var);
+
+T_PTROBJ_0016
+    sv_setref_pv($arg, \"Qt::Multimedia::QAbstractAudioOutput\", (void *)$var);
+
+T_PTROBJ_0017
+    sv_setref_pv($arg, \"Qt::Multimedia::QAudioEngineFactoryInterface\", (void *)$var);
+
+T_PTROBJ_0018
+    sv_setref_pv($arg, \"Qt::Core::QBool\", (void *)$var);
+
