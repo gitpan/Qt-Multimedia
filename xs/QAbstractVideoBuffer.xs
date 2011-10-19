@@ -18,7 +18,7 @@ PROTOTYPES: DISABLE
 #### 
 ################################################################
 
-##  QAbstractVideoBuffer()
+##  QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type)
   void
 QAbstractVideoBuffer::new(...)
 PREINIT:
@@ -63,7 +63,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## uchar * map(, , )
+## uchar * map(QAbstractVideoBuffer::MapMode mode, int * numBytes, int * bytesPerLine)
 void
 QAbstractVideoBuffer::map(...)
 PREINIT:

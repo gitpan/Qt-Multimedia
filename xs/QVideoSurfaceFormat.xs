@@ -19,9 +19,9 @@ PROTOTYPES: DISABLE
 ################################################################
 
 ##  QVideoSurfaceFormat()
-##  QVideoSurfaceFormat()
-##  QVideoSurfaceFormat(, , )
-##  QVideoSurfaceFormat(, ,  = QAbstractVideoBuffer::NoHandle)
+##  QVideoSurfaceFormat(const QVideoSurfaceFormat & format)
+##  QVideoSurfaceFormat(const QSize & size, QVideoFrame::PixelFormat pixelFormat, QAbstractVideoBuffer::HandleType handleType)
+##  QVideoSurfaceFormat(const QSize & size, QVideoFrame::PixelFormat pixelFormat, QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle)
   void
 QVideoSurfaceFormat::new(...)
 PREINIT:
@@ -178,7 +178,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool operator!=()
+## bool operator!=(const QVideoSurfaceFormat & format)
 void
 QVideoSurfaceFormat::operator_not_equal(...)
 PREINIT:
@@ -192,7 +192,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QVideoSurfaceFormat & operator=()
+## QVideoSurfaceFormat & operator=(const QVideoSurfaceFormat & format)
 void
 QVideoSurfaceFormat::operator_assign(...)
 PREINIT:
@@ -206,7 +206,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool operator==()
+## bool operator==(const QVideoSurfaceFormat & format)
 void
 QVideoSurfaceFormat::operator_equal_to(...)
 PREINIT:
@@ -246,7 +246,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QVariant property()
+## QVariant property(const char * name)
 void
 QVideoSurfaceFormat::property(...)
 PREINIT:
@@ -273,7 +273,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## void setFrameRate()
+## void setFrameRate(qreal rate)
 void
 QVideoSurfaceFormat::setFrameRate(...)
 PREINIT:
@@ -285,8 +285,8 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setFrameSize()
-## void setFrameSize(, )
+## void setFrameSize(const QSize & size)
+## void setFrameSize(int width, int height)
 void
 QVideoSurfaceFormat::setFrameSize(...)
 PREINIT:
@@ -323,8 +323,8 @@ PPCODE:
         break;
     }
 
-## void setPixelAspectRatio()
-## void setPixelAspectRatio(, )
+## void setPixelAspectRatio(const QSize & ratio)
+## void setPixelAspectRatio(int width, int height)
 void
 QVideoSurfaceFormat::setPixelAspectRatio(...)
 PREINIT:
@@ -361,7 +361,7 @@ PPCODE:
         break;
     }
 
-## void setProperty(, )
+## void setProperty(const char * name, const QVariant & value)
 void
 QVideoSurfaceFormat::setProperty(...)
 PREINIT:
@@ -375,7 +375,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setScanLineDirection()
+## void setScanLineDirection(QVideoSurfaceFormat::Direction direction)
 void
 QVideoSurfaceFormat::setScanLineDirection(...)
 PREINIT:
@@ -387,7 +387,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setViewport()
+## void setViewport(const QRect & viewport)
 void
 QVideoSurfaceFormat::setViewport(...)
 PREINIT:
@@ -399,7 +399,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setYCbCrColorSpace()
+## void setYCbCrColorSpace(QVideoSurfaceFormat::YCbCrColorSpace colorSpace)
 void
 QVideoSurfaceFormat::setYCbCrColorSpace(...)
 PREINIT:

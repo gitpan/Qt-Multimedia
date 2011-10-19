@@ -18,8 +18,8 @@ PROTOTYPES: DISABLE
 #### 
 ################################################################
 
-##  QAbstractVideoSurface()
-##  QAbstractVideoSurface( = 0)
+##  QAbstractVideoSurface(QObject * parent)
+##  QAbstractVideoSurface(QObject * parent = 0)
   void
 QAbstractVideoSurface::new(...)
 PREINIT:
@@ -91,7 +91,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool isFormatSupported()
+## bool isFormatSupported(const QVideoSurfaceFormat & format)
 void
 QAbstractVideoSurface::isFormatSupported(...)
 PREINIT:
@@ -105,7 +105,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QVideoSurfaceFormat nearestFormat()
+## QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat & format)
 void
 QAbstractVideoSurface::nearestFormat(...)
 PREINIT:
@@ -119,7 +119,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool present()
+## bool present(const QVideoFrame & frame)
 void
 QAbstractVideoSurface::present(...)
 PREINIT:
@@ -133,7 +133,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool start()
+## bool start(const QVideoSurfaceFormat & format)
 void
 QAbstractVideoSurface::start(...)
 PREINIT:

@@ -19,10 +19,10 @@ PROTOTYPES: DISABLE
 ################################################################
 
 ##  QVideoFrame()
-##  QVideoFrame()
-##  QVideoFrame()
-##  QVideoFrame(, , )
-##  QVideoFrame(, , , )
+##  QVideoFrame(const QImage & image)
+##  QVideoFrame(const QVideoFrame & other)
+##  QVideoFrame(QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format)
+##  QVideoFrame(int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format)
   void
 QVideoFrame::new(...)
 PREINIT:
@@ -227,7 +227,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## static QImage::Format imageFormatFromPixelFormat()
+## static QImage::Format imageFormatFromPixelFormat(QVideoFrame::PixelFormat format)
 void
 QVideoFrame::imageFormatFromPixelFormat(...)
 PREINIT:
@@ -293,7 +293,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool map()
+## bool map(QAbstractVideoBuffer::MapMode mode)
 void
 QVideoFrame::map(...)
 PREINIT:
@@ -333,7 +333,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QVideoFrame & operator=()
+## QVideoFrame & operator=(const QVideoFrame & other)
 void
 QVideoFrame::operator_assign(...)
 PREINIT:
@@ -360,7 +360,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## static QVideoFrame::PixelFormat pixelFormatFromImageFormat()
+## static QVideoFrame::PixelFormat pixelFormatFromImageFormat(QImage::Format format)
 void
 QVideoFrame::pixelFormatFromImageFormat(...)
 PREINIT:
@@ -374,7 +374,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## void setEndTime()
+## void setEndTime(qint64 time)
 void
 QVideoFrame::setEndTime(...)
 PREINIT:
@@ -386,7 +386,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setFieldType()
+## void setFieldType(QVideoFrame::FieldType arg0)
 void
 QVideoFrame::setFieldType(...)
 PREINIT:
@@ -398,7 +398,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setStartTime()
+## void setStartTime(qint64 time)
 void
 QVideoFrame::setStartTime(...)
 PREINIT:

@@ -48,7 +48,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool isFormatSupported()
+## bool isFormatSupported(const QAudioFormat & format)
 void
 QAbstractAudioDeviceInfo::isFormatSupported(...)
 PREINIT:
@@ -62,7 +62,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QAudioFormat nearestFormat()
+## QAudioFormat nearestFormat(const QAudioFormat & format)
 void
 QAbstractAudioDeviceInfo::nearestFormat(...)
 PREINIT:

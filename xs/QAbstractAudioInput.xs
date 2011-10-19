@@ -148,7 +148,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setBufferSize()
+## void setBufferSize(int value)
 void
 QAbstractAudioInput::setBufferSize(...)
 PREINIT:
@@ -160,7 +160,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setNotifyInterval()
+## void setNotifyInterval(int milliSeconds)
 void
 QAbstractAudioInput::setNotifyInterval(...)
 PREINIT:
@@ -172,7 +172,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## QIODevice * start()
+## QIODevice * start(QIODevice * device)
 void
 QAbstractAudioInput::start(...)
 PREINIT:

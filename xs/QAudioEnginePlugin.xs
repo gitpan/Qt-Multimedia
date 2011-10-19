@@ -18,8 +18,8 @@ PROTOTYPES: DISABLE
 #### 
 ################################################################
 
-##  QAudioEnginePlugin()
-##  QAudioEnginePlugin( = 0)
+##  QAudioEnginePlugin(QObject * parent)
+##  QAudioEnginePlugin(QObject * parent = 0)
   void
 QAudioEnginePlugin::new(...)
 PREINIT:
@@ -65,7 +65,7 @@ CODE:
     if(THIS != 0 && !SvREADONLY(SvRV(ST(0))))
         delete THIS;
 
-## QAbstractAudioDeviceInfo * createDeviceInfo(, )
+## QAbstractAudioDeviceInfo * createDeviceInfo(const QByteArray & device, QAudio::Mode mode)
 void
 QAudioEnginePlugin::createDeviceInfo(...)
 PREINIT:
@@ -81,8 +81,8 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QAbstractAudioInput * createInput(, )
-## QAbstractAudioInput * createInput(,  = QAudioFormat())
+## QAbstractAudioInput * createInput(const QByteArray & device, const QAudioFormat & format)
+## QAbstractAudioInput * createInput(const QByteArray & device, const QAudioFormat & format = QAudioFormat())
 void
 QAudioEnginePlugin::createInput(...)
 PREINIT:
@@ -125,8 +125,8 @@ PPCODE:
         break;
     }
 
-## QAbstractAudioOutput * createOutput(, )
-## QAbstractAudioOutput * createOutput(,  = QAudioFormat())
+## QAbstractAudioOutput * createOutput(const QByteArray & device, const QAudioFormat & format)
+## QAbstractAudioOutput * createOutput(const QByteArray & device, const QAudioFormat & format = QAudioFormat())
 void
 QAudioEnginePlugin::createOutput(...)
 PREINIT:

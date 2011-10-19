@@ -7,8 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QObject/;
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -24,17 +23,17 @@ Qt::Multimedia::QAudioInput
 
 =over
 
-=item   QAudioInput(, )
+=item   QAudioInput(const QAudioFormat & format, QObject * parent)
 
-=item   QAudioInput(,  = 0)
+=item   QAudioInput(const QAudioFormat & format, QObject * parent = 0)
 
-=item   QAudioInput( = QAudioFormat(),  = 0)
+=item   QAudioInput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 
-=item   QAudioInput(, , )
+=item   QAudioInput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format, QObject * parent)
 
-=item   QAudioInput(, ,  = 0)
+=item   QAudioInput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format, QObject * parent = 0)
 
-=item   QAudioInput(,  = QAudioFormat(),  = 0)
+=item   QAudioInput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 
 =item   ~QAudioInput()
 
@@ -58,13 +57,13 @@ Qt::Multimedia::QAudioInput
 
 =item  void resume()
 
-=item  void setBufferSize()
+=item  void setBufferSize(int bytes)
 
-=item  void setNotifyInterval()
+=item  void setNotifyInterval(int milliSeconds)
 
 =item  QIODevice * start()
 
-=item  void start()
+=item  void start(QIODevice * device)
 
 =item  QAudio::State state()
 

@@ -7,8 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QObject/;
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -24,9 +23,9 @@ Qt::Multimedia::QAbstractVideoSurface
 
 =over
 
-=item   QAbstractVideoSurface()
+=item   QAbstractVideoSurface(QObject * parent)
 
-=item   QAbstractVideoSurface( = 0)
+=item   QAbstractVideoSurface(QObject * parent = 0)
 
 =item   ~QAbstractVideoSurface()
 
@@ -34,13 +33,13 @@ Qt::Multimedia::QAbstractVideoSurface
 
 =item  bool isActive()
 
-=item  bool isFormatSupported()
+=item  bool isFormatSupported(const QVideoSurfaceFormat & format)
 
-=item  QVideoSurfaceFormat nearestFormat()
+=item  QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat & format)
 
-=item  bool present()
+=item  bool present(const QVideoFrame & frame)
 
-=item  bool start()
+=item  bool start(const QVideoSurfaceFormat & format)
 
 =item  void stop()
 

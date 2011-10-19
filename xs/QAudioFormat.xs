@@ -19,7 +19,7 @@ PROTOTYPES: DISABLE
 ################################################################
 
 ##  QAudioFormat()
-##  QAudioFormat()
+##  QAudioFormat(const QAudioFormat & other)
   void
 QAudioFormat::new(...)
 PREINIT:
@@ -141,7 +141,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool operator!=()
+## bool operator!=(const QAudioFormat & other)
 void
 QAudioFormat::operator_not_equal(...)
 PREINIT:
@@ -155,7 +155,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QAudioFormat & operator=()
+## QAudioFormat & operator=(const QAudioFormat & other)
 void
 QAudioFormat::operator_assign(...)
 PREINIT:
@@ -169,7 +169,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool operator==()
+## bool operator==(const QAudioFormat & other)
 void
 QAudioFormat::operator_equal_to(...)
 PREINIT:
@@ -222,7 +222,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## void setByteOrder()
+## void setByteOrder(QAudioFormat::Endian byteOrder)
 void
 QAudioFormat::setByteOrder(...)
 PREINIT:
@@ -234,7 +234,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setChannelCount()
+## void setChannelCount(int channelCount)
 void
 QAudioFormat::setChannelCount(...)
 PREINIT:
@@ -246,7 +246,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setChannels()
+## void setChannels(int channels)
 void
 QAudioFormat::setChannels(...)
 PREINIT:
@@ -258,7 +258,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setCodec()
+## void setCodec(const QString & codec)
 void
 QAudioFormat::setCodec(...)
 PREINIT:
@@ -270,7 +270,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setFrequency()
+## void setFrequency(int frequency)
 void
 QAudioFormat::setFrequency(...)
 PREINIT:
@@ -282,7 +282,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setSampleRate()
+## void setSampleRate(int sampleRate)
 void
 QAudioFormat::setSampleRate(...)
 PREINIT:
@@ -294,7 +294,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setSampleSize()
+## void setSampleSize(int sampleSize)
 void
 QAudioFormat::setSampleSize(...)
 PREINIT:
@@ -306,7 +306,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setSampleType()
+## void setSampleType(QAudioFormat::SampleType sampleType)
 void
 QAudioFormat::setSampleType(...)
 PREINIT:

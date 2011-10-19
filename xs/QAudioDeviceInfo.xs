@@ -19,7 +19,7 @@ PROTOTYPES: DISABLE
 ################################################################
 
 ##  QAudioDeviceInfo()
-##  QAudioDeviceInfo()
+##  QAudioDeviceInfo(const QAudioDeviceInfo & other)
   void
 QAudioDeviceInfo::new(...)
 PREINIT:
@@ -102,7 +102,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## bool isFormatSupported()
+## bool isFormatSupported(const QAudioFormat & format)
 void
 QAudioDeviceInfo::isFormatSupported(...)
 PREINIT:
@@ -129,7 +129,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QAudioFormat nearestFormat()
+## QAudioFormat nearestFormat(const QAudioFormat & format)
 void
 QAudioDeviceInfo::nearestFormat(...)
 PREINIT:
@@ -143,7 +143,7 @@ PPCODE:
     XSRETURN(1);
     }
 
-## QAudioDeviceInfo & operator=()
+## QAudioDeviceInfo & operator=(const QAudioDeviceInfo & other)
 void
 QAudioDeviceInfo::operator_assign(...)
 PREINIT:

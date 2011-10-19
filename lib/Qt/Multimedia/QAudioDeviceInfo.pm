@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -25,7 +25,7 @@ Qt::Multimedia::QAudioDeviceInfo
 
 =item   QAudioDeviceInfo()
 
-=item   QAudioDeviceInfo()
+=item   QAudioDeviceInfo(const QAudioDeviceInfo & other)
 
 =item   ~QAudioDeviceInfo()
 
@@ -35,13 +35,13 @@ Qt::Multimedia::QAudioDeviceInfo
 
 =item  QString deviceName()
 
-=item  bool isFormatSupported()
+=item  bool isFormatSupported(const QAudioFormat & format)
 
 =item  bool isNull()
 
-=item  QAudioFormat nearestFormat()
+=item  QAudioFormat nearestFormat(const QAudioFormat & format)
 
-=item  QAudioDeviceInfo & operator=()
+=item  QAudioDeviceInfo & operator=(const QAudioDeviceInfo & other)
 
 =item  QAudioFormat preferredFormat()
 

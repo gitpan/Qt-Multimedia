@@ -7,8 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QObject/;
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -44,11 +43,11 @@ Qt::Multimedia::QAbstractAudioOutput
 
 =item  void resume()
 
-=item  void setBufferSize()
+=item  void setBufferSize(int value)
 
-=item  void setNotifyInterval()
+=item  void setNotifyInterval(int milliSeconds)
 
-=item  QIODevice * start()
+=item  QIODevice * start(QIODevice * device)
 
 =item  QAudio::State state()
 

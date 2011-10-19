@@ -1,7 +1,7 @@
-package Qt::Multimedia::QAbstractAudioDeviceInfo;
+package Qt::Multimedia::QAudioEngineFactoryInterface;
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
-# classname: QAbstractAudioDeviceInfo
-# file     : QtMultimedia/qaudioengine.h
+# classname: QAudioEngineFactoryInterface
+# file     : QtMultimedia/qaudioengineplugin.h
 
 use strict;
 use warnings;
@@ -17,21 +17,11 @@ our $VERSION = '0.01_03';
 
 =head1 NAME
 
-Qt::Multimedia::QAbstractAudioDeviceInfo
+Qt::Multimedia::QAudioEngineFactoryInterface
 
 =head1 PUBLIC METHODS
 
 =over
-
-=item  QStringList codecList()
-
-=item  QString deviceName()
-
-=item  bool isFormatSupported(const QAudioFormat & format)
-
-=item  QAudioFormat nearestFormat(const QAudioFormat & format)
-
-=item  QAudioFormat preferredFormat()
 
 
 =back

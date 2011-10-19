@@ -5,7 +5,7 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 14;
+use Test::More tests => 15;
 BEGIN {
 use_ok('Qt::Multimedia');
 use_ok('Qt::Multimedia');
@@ -16,6 +16,7 @@ use_ok('Qt::Multimedia::QVideoSurfaceFormat');
 use_ok('Qt::Multimedia::QAbstractAudioInput');
 use_ok('Qt::Multimedia::QAudioFormat');
 use_ok('Qt::Multimedia::QAudioDeviceInfo');
+use_ok('Qt::Multimedia::QAudioEngineFactoryInterface');
 use_ok('Qt::Multimedia::QAudioOutput');
 use_ok('Qt::Multimedia::QAudioEnginePlugin');
 use_ok('Qt::Multimedia::QAbstractAudioDeviceInfo');

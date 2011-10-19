@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -23,7 +23,7 @@ Qt::Multimedia::QAbstractVideoBuffer
 
 =over
 
-=item   QAbstractVideoBuffer()
+=item   QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type)
 
 =item   ~QAbstractVideoBuffer()
 
@@ -31,7 +31,7 @@ Qt::Multimedia::QAbstractVideoBuffer
 
 =item  QAbstractVideoBuffer::HandleType handleType()
 
-=item  uchar * map(, , )
+=item  uchar * map(QAbstractVideoBuffer::MapMode mode, int * numBytes, int * bytesPerLine)
 
 =item  QAbstractVideoBuffer::MapMode mapMode()
 

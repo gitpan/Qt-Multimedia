@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -25,11 +25,11 @@ Qt::Multimedia::QVideoSurfaceFormat
 
 =item   QVideoSurfaceFormat()
 
-=item   QVideoSurfaceFormat()
+=item   QVideoSurfaceFormat(const QVideoSurfaceFormat & format)
 
-=item   QVideoSurfaceFormat(, , )
+=item   QVideoSurfaceFormat(const QSize & size, QVideoFrame::PixelFormat pixelFormat, QAbstractVideoBuffer::HandleType handleType)
 
-=item   QVideoSurfaceFormat(, ,  = QAbstractVideoBuffer::NoHandle)
+=item   QVideoSurfaceFormat(const QSize & size, QVideoFrame::PixelFormat pixelFormat, QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle)
 
 =item   ~QVideoSurfaceFormat()
 
@@ -45,37 +45,37 @@ Qt::Multimedia::QVideoSurfaceFormat
 
 =item  bool isValid()
 
-=item  bool operator!=()
+=item  bool operator!=(const QVideoSurfaceFormat & format)
 
-=item  QVideoSurfaceFormat & operator=()
+=item  QVideoSurfaceFormat & operator=(const QVideoSurfaceFormat & format)
 
-=item  bool operator==()
+=item  bool operator==(const QVideoSurfaceFormat & format)
 
 =item  QSize pixelAspectRatio()
 
 =item  QVideoFrame::PixelFormat pixelFormat()
 
-=item  QVariant property()
+=item  QVariant property(const char * name)
 
 =item  QVideoSurfaceFormat::Direction scanLineDirection()
 
-=item  void setFrameRate()
+=item  void setFrameRate(qreal rate)
 
-=item  void setFrameSize()
+=item  void setFrameSize(const QSize & size)
 
-=item  void setFrameSize(, )
+=item  void setFrameSize(int width, int height)
 
-=item  void setPixelAspectRatio()
+=item  void setPixelAspectRatio(const QSize & ratio)
 
-=item  void setPixelAspectRatio(, )
+=item  void setPixelAspectRatio(int width, int height)
 
-=item  void setProperty(, )
+=item  void setProperty(const char * name, const QVariant & value)
 
-=item  void setScanLineDirection()
+=item  void setScanLineDirection(QVideoSurfaceFormat::Direction direction)
 
-=item  void setViewport()
+=item  void setViewport(const QRect & viewport)
 
-=item  void setYCbCrColorSpace()
+=item  void setYCbCrColorSpace(QVideoSurfaceFormat::YCbCrColorSpace colorSpace)
 
 =item  QSize sizeHint()
 

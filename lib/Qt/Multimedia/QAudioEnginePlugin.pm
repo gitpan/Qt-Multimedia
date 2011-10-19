@@ -7,8 +7,9 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QObject Qt::Multimedia::QAudioEngineFactoryInterface/;
+our $VERSION = '0.01_03';
+use base qw/Qt::Multimedia::QAudioEngineFactoryInterface/;
+#our @ISA = qw/Qt::Multimedia::QAudioEngineFactoryInterface/;
 
 
 # FIXME: operator overload
@@ -24,21 +25,21 @@ Qt::Multimedia::QAudioEnginePlugin
 
 =over
 
-=item   QAudioEnginePlugin()
+=item   QAudioEnginePlugin(QObject * parent)
 
-=item   QAudioEnginePlugin( = 0)
+=item   QAudioEnginePlugin(QObject * parent = 0)
 
 =item   ~QAudioEnginePlugin()
 
-=item  QAbstractAudioDeviceInfo * createDeviceInfo(, )
+=item  QAbstractAudioDeviceInfo * createDeviceInfo(const QByteArray & device, QAudio::Mode mode)
 
-=item  QAbstractAudioInput * createInput(, )
+=item  QAbstractAudioInput * createInput(const QByteArray & device, const QAudioFormat & format)
 
-=item  QAbstractAudioInput * createInput(,  = QAudioFormat())
+=item  QAbstractAudioInput * createInput(const QByteArray & device, const QAudioFormat & format = QAudioFormat())
 
-=item  QAbstractAudioOutput * createOutput(, )
+=item  QAbstractAudioOutput * createOutput(const QByteArray & device, const QAudioFormat & format)
 
-=item  QAbstractAudioOutput * createOutput(,  = QAudioFormat())
+=item  QAbstractAudioOutput * createOutput(const QByteArray & device, const QAudioFormat & format = QAudioFormat())
 
 =item  QStringList keys()
 

@@ -18,12 +18,12 @@ PROTOTYPES: DISABLE
 #### 
 ################################################################
 
-##  QAudioOutput(, )
-##  QAudioOutput(,  = 0)
-##  QAudioOutput( = QAudioFormat(),  = 0)
-##  QAudioOutput(, , )
-##  QAudioOutput(, ,  = 0)
-##  QAudioOutput(,  = QAudioFormat(),  = 0)
+##  QAudioOutput(const QAudioFormat & format, QObject * parent)
+##  QAudioOutput(const QAudioFormat & format, QObject * parent = 0)
+##  QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
+##  QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format, QObject * parent)
+##  QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format, QObject * parent = 0)
+##  QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
   void
 QAudioOutput::new(...)
 PREINIT:
@@ -267,7 +267,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setBufferSize()
+## void setBufferSize(int bytes)
 void
 QAudioOutput::setBufferSize(...)
 PREINIT:
@@ -279,7 +279,7 @@ PPCODE:
     XSRETURN(0);
     }
 
-## void setNotifyInterval()
+## void setNotifyInterval(int milliSeconds)
 void
 QAudioOutput::setNotifyInterval(...)
 PREINIT:
@@ -292,7 +292,7 @@ PPCODE:
     }
 
 ## QIODevice * start()
-## void start()
+## void start(QIODevice * device)
 void
 QAudioOutput::start(...)
 PREINIT:

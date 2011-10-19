@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -25,7 +25,7 @@ Qt::Multimedia::QAudioFormat
 
 =item   QAudioFormat()
 
-=item   QAudioFormat()
+=item   QAudioFormat(const QAudioFormat & other)
 
 =item   ~QAudioFormat()
 
@@ -41,11 +41,11 @@ Qt::Multimedia::QAudioFormat
 
 =item  bool isValid()
 
-=item  bool operator!=()
+=item  bool operator!=(const QAudioFormat & other)
 
-=item  QAudioFormat & operator=()
+=item  QAudioFormat & operator=(const QAudioFormat & other)
 
-=item  bool operator==()
+=item  bool operator==(const QAudioFormat & other)
 
 =item  int sampleRate()
 
@@ -53,21 +53,21 @@ Qt::Multimedia::QAudioFormat
 
 =item  QAudioFormat::SampleType sampleType()
 
-=item  void setByteOrder()
+=item  void setByteOrder(QAudioFormat::Endian byteOrder)
 
-=item  void setChannelCount()
+=item  void setChannelCount(int channelCount)
 
-=item  void setChannels()
+=item  void setChannels(int channels)
 
-=item  void setCodec()
+=item  void setCodec(const QString & codec)
 
-=item  void setFrequency()
+=item  void setFrequency(int frequency)
 
-=item  void setSampleRate()
+=item  void setSampleRate(int sampleRate)
 
-=item  void setSampleSize()
+=item  void setSampleSize(int sampleSize)
 
-=item  void setSampleType()
+=item  void setSampleType(QAudioFormat::SampleType sampleType)
 
 
 =back

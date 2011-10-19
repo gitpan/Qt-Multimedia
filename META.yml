@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Qt-Multimedia
-version:            0.01_02
+version:            0.01_03
 abstract:           Qt Multimedia binding
 author:
     - Dongxu Ma <dongxu@cpan.org>

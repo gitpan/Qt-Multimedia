@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -25,13 +25,13 @@ Qt::Multimedia::QVideoFrame
 
 =item   QVideoFrame()
 
-=item   QVideoFrame()
+=item   QVideoFrame(const QImage & image)
 
-=item   QVideoFrame()
+=item   QVideoFrame(const QVideoFrame & other)
 
-=item   QVideoFrame(, , )
+=item   QVideoFrame(QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format)
 
-=item   QVideoFrame(, , , )
+=item   QVideoFrame(int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format)
 
 =item   ~QVideoFrame()
 
@@ -51,7 +51,7 @@ Qt::Multimedia::QVideoFrame
 
 =item  int height()
 
-=item  static QImage::Format imageFormatFromPixelFormat()
+=item  static QImage::Format imageFormatFromPixelFormat(QVideoFrame::PixelFormat format)
 
 =item  bool isMapped()
 
@@ -61,23 +61,23 @@ Qt::Multimedia::QVideoFrame
 
 =item  bool isWritable()
 
-=item  bool map()
+=item  bool map(QAbstractVideoBuffer::MapMode mode)
 
 =item  QAbstractVideoBuffer::MapMode mapMode()
 
 =item  int mappedBytes()
 
-=item  QVideoFrame & operator=()
+=item  QVideoFrame & operator=(const QVideoFrame & other)
 
 =item  QVideoFrame::PixelFormat pixelFormat()
 
-=item  static QVideoFrame::PixelFormat pixelFormatFromImageFormat()
+=item  static QVideoFrame::PixelFormat pixelFormatFromImageFormat(QImage::Format format)
 
-=item  void setEndTime()
+=item  void setEndTime(qint64 time)
 
-=item  void setFieldType()
+=item  void setFieldType(QVideoFrame::FieldType arg0)
 
-=item  void setStartTime()
+=item  void setStartTime(qint64 time)
 
 =item  QSize size()
 

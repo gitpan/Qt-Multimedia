@@ -21,6 +21,7 @@
 #include "ppport.h"
 #undef do_open
 #undef do_close
+#undef RETURN
 
 typedef bool (*T_FPOINTER_QINTERNALCALLBACK_QNAMESPACE)(void **);
 typedef void (*T_FPOINTER_QTMSGHANDLER_QGLOBAL)(QtMsgType,const char *);
@@ -34,6 +35,7 @@ INCLUDE:		xs/QAbstractAudioOutput.xs
 INCLUDE:		xs/QAbstractVideoBuffer.xs
 INCLUDE:		xs/QAbstractVideoSurface.xs
 INCLUDE:		xs/QAudioDeviceInfo.xs
+INCLUDE:		xs/QAudioEngineFactoryInterface.xs
 INCLUDE:		xs/QAudioEnginePlugin.xs
 INCLUDE:		xs/QAudioFormat.xs
 INCLUDE:		xs/QAudioInput.xs
