@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -64,6 +64,20 @@ QAudioEnginePlugin::DESTROY()
 CODE:
     if(THIS != 0 && !SvREADONLY(SvRV(ST(0))))
         delete THIS;
+
+## QList<QByteArray> availableDevices(QAudio::Mode arg0)
+void
+QAudioEnginePlugin::availableDevices(...)
+PREINIT:
+QAudio::Mode arg00;
+PPCODE:
+    if (SvIOK(ST(1))) {
+      arg00 = (QAudio::Mode)SvIV(ST(1));
+    QList<QByteArray> ret = THIS->availableDevices(arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T004", (void *)new QList<QByteArray>(ret));
+    XSRETURN(1);
+    }
 
 ## QAbstractAudioDeviceInfo * createDeviceInfo(const QByteArray & device, QAudio::Mode mode)
 void

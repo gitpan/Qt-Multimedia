@@ -19,6 +19,12 @@ QAbstractAudioDeviceInfo *              		T_PTROBJ_0015
 QAbstractAudioOutput *                  		T_PTROBJ_0016
 QAudioEngineFactoryInterface *          		T_PTROBJ_0017
 QBool *                                 		T_PTROBJ_0018
+T000 *                                  		T_PTROBJ_0019
+T001 *                                  		T_PTROBJ_0020
+T002 *                                  		T_PTROBJ_0021
+T003 *                                  		T_PTROBJ_0022
+T004 *                                  		T_PTROBJ_0023
+T005 *                                  		T_PTROBJ_0024
 
 ################################################################
 INPUT
@@ -136,6 +142,42 @@ T_PTROBJ_0018
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QBool\");
 
+T_PTROBJ_0019
+    if (sv_derived_from($arg, \"Qt::Multimedia::Template::T000\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::Template::T000\");
+
+T_PTROBJ_0020
+    if (sv_derived_from($arg, \"Qt::Multimedia::Template::T001\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::Template::T001\");
+
+T_PTROBJ_0021
+    if (sv_derived_from($arg, \"Qt::Multimedia::Template::T002\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::Template::T002\");
+
+T_PTROBJ_0022
+    if (sv_derived_from($arg, \"Qt::Multimedia::Template::T003\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::Template::T003\");
+
+T_PTROBJ_0023
+    if (sv_derived_from($arg, \"Qt::Multimedia::Template::T004\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::Template::T004\");
+
+T_PTROBJ_0024
+    if (sv_derived_from($arg, \"Qt::Multimedia::Template::T005\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Multimedia::Template::T005\");
+
 
 ################################################################
 OUTPUT
@@ -195,4 +237,22 @@ T_PTROBJ_0017
 
 T_PTROBJ_0018
     sv_setref_pv($arg, \"Qt::Core::QBool\", (void *)$var);
+
+T_PTROBJ_0019
+    sv_setref_pv($arg, \"Qt::Multimedia::Template::T000\", (void *)$var);
+
+T_PTROBJ_0020
+    sv_setref_pv($arg, \"Qt::Multimedia::Template::T001\", (void *)$var);
+
+T_PTROBJ_0021
+    sv_setref_pv($arg, \"Qt::Multimedia::Template::T002\", (void *)$var);
+
+T_PTROBJ_0022
+    sv_setref_pv($arg, \"Qt::Multimedia::Template::T003\", (void *)$var);
+
+T_PTROBJ_0023
+    sv_setref_pv($arg, \"Qt::Multimedia::Template::T004\", (void *)$var);
+
+T_PTROBJ_0024
+    sv_setref_pv($arg, \"Qt::Multimedia::Template::T005\", (void *)$var);
 

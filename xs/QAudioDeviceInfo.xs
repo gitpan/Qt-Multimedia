@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -62,6 +62,20 @@ QAudioDeviceInfo::DESTROY()
 CODE:
     if(THIS != 0 && !SvREADONLY(SvRV(ST(0))))
         delete THIS;
+
+## static QList<QAudioDeviceInfo> availableDevices(QAudio::Mode mode)
+void
+QAudioDeviceInfo::availableDevices(...)
+PREINIT:
+QAudio::Mode arg00;
+PPCODE:
+    if (SvIOK(ST(1))) {
+      arg00 = (QAudio::Mode)SvIV(ST(1));
+    QList<QAudioDeviceInfo> ret = THIS->availableDevices(arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T003", (void *)new QList<QAudioDeviceInfo>(ret));
+    XSRETURN(1);
+    }
 
 ## static QAudioDeviceInfo defaultInputDevice()
 void
@@ -170,6 +184,45 @@ PPCODE:
     XSRETURN(1);
     }
 
+## QList<QAudioFormat::Endian> supportedByteOrders()
+void
+QAudioDeviceInfo::supportedByteOrders(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QAudioFormat::Endian> ret = THIS->supportedByteOrders();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T001", (void *)new QList<QAudioFormat::Endian>(ret));
+    XSRETURN(1);
+    }
+
+## QList<int> supportedChannelCounts()
+void
+QAudioDeviceInfo::supportedChannelCounts(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<int> ret = THIS->supportedChannelCounts();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T000", (void *)new QList<int>(ret));
+    XSRETURN(1);
+    }
+
+## QList<int> supportedChannels()
+void
+QAudioDeviceInfo::supportedChannels(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<int> ret = THIS->supportedChannels();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T000", (void *)new QList<int>(ret));
+    XSRETURN(1);
+    }
+
 ## QStringList supportedCodecs()
 void
 QAudioDeviceInfo::supportedCodecs(...)
@@ -180,5 +233,57 @@ PPCODE:
     QStringList ret = THIS->supportedCodecs();
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringList", (void *)new QStringList(ret));
+    XSRETURN(1);
+    }
+
+## QList<int> supportedFrequencies()
+void
+QAudioDeviceInfo::supportedFrequencies(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<int> ret = THIS->supportedFrequencies();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T000", (void *)new QList<int>(ret));
+    XSRETURN(1);
+    }
+
+## QList<int> supportedSampleRates()
+void
+QAudioDeviceInfo::supportedSampleRates(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<int> ret = THIS->supportedSampleRates();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T000", (void *)new QList<int>(ret));
+    XSRETURN(1);
+    }
+
+## QList<int> supportedSampleSizes()
+void
+QAudioDeviceInfo::supportedSampleSizes(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<int> ret = THIS->supportedSampleSizes();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T000", (void *)new QList<int>(ret));
+    XSRETURN(1);
+    }
+
+## QList<QAudioFormat::SampleType> supportedSampleTypes()
+void
+QAudioDeviceInfo::supportedSampleTypes(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QAudioFormat::SampleType> ret = THIS->supportedSampleTypes();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Multimedia::Template::T002", (void *)new QList<QAudioFormat::SampleType>(ret));
     XSRETURN(1);
     }

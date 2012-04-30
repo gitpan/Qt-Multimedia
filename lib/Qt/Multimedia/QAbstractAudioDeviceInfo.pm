@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_03';
+our $VERSION = '0.01_04';
 
 
 # FIXME: operator overload
@@ -23,15 +23,25 @@ Qt::Multimedia::QAbstractAudioDeviceInfo
 
 =over
 
+=item  QList<QAudioFormat::Endian> byteOrderList()
+
+=item  QList<int> channelsList()
+
 =item  QStringList codecList()
 
 =item  QString deviceName()
+
+=item  QList<int> frequencyList()
 
 =item  bool isFormatSupported(const QAudioFormat & format)
 
 =item  QAudioFormat nearestFormat(const QAudioFormat & format)
 
 =item  QAudioFormat preferredFormat()
+
+=item  QList<int> sampleSizeList()
+
+=item  QList<QAudioFormat::SampleType> sampleTypeList()
 
 
 =back
@@ -53,7 +63,7 @@ Dongxu Ma E<lt>dongxu@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2011 - 2011 by Dongxu Ma
+Copyright (C) 2011 - 2012 by Dongxu Ma
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

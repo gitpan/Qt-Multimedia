@@ -25,6 +25,12 @@
 
 typedef bool (*T_FPOINTER_QINTERNALCALLBACK_QNAMESPACE)(void **);
 typedef void (*T_FPOINTER_QTMSGHANDLER_QGLOBAL)(QtMsgType,const char *);
+typedef QList<int> T000;
+typedef QList<QAudioFormat::Endian> T001;
+typedef QList<QAudioFormat::SampleType> T002;
+typedef QList<QAudioDeviceInfo> T003;
+typedef QList<QByteArray> T004;
+typedef QList<QVideoFrame::PixelFormat> T005;
 
 MODULE = Qt		PACKAGE = Qt
 PROTOTYPES: DISABLE
@@ -42,3 +48,9 @@ INCLUDE:		xs/QAudioInput.xs
 INCLUDE:		xs/QAudioOutput.xs
 INCLUDE:		xs/QVideoFrame.xs
 INCLUDE:		xs/QVideoSurfaceFormat.xs
+INCLUDE:		xs/T000.xs
+INCLUDE:		xs/T001.xs
+INCLUDE:		xs/T002.xs
+INCLUDE:		xs/T003.xs
+INCLUDE:		xs/T004.xs
+INCLUDE:		xs/T005.xs
